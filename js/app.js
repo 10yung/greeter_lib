@@ -1,3 +1,3 @@
-var G =  $G('andy', 'lin');
+var g =  $G('andy', 'lin');
 
-console.log(G);
+g.greet().setLang('es').greet(true);
