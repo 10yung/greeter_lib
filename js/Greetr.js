@@ -1,5 +1,6 @@
-(function (global, $){
+;(function (global, $){  //prevent pre javascript don't end with ; properly 
 
+    //return a new function so we don't always use new keyowrd to use my function
     var Greetr = function (firstName, lastName, language){
         return new Greetr.init(firstName, lastName, language);
     }
@@ -81,6 +82,27 @@
             this.validate();
 
             return this;
+        },
+        HTMLGreeting : function(selector, formal){
+            if (!$) {
+                throw 'jQuery not loaded';
+            }
+
+            if (!selector) {
+                throw 'Missing jQuery selector';
+            }
+
+            var msg;
+            if (formal) {
+                msg = this.formalGreetinng();
+            }
+            else {
+                msg = this.greeting();
+            }
+
+            $(selector).html(msg);
+
+            return this;
         }
 
     };
@@ -94,6 +116,8 @@
         self.firstName = firstName || '';
         self.lastName = lastName || '';
         self.language = language || 'en';
+
+        self.validate();
 
     }
 
