@@ -14,4 +14,8 @@ Here just put the Greeting package prototype and in this practice I've learned s
 
 * **jQuery like coding pattern and jQuery way to use**
 
-   In this Greetr Lib, I imitate jQuery so that I can use jQuery way ``g.greet().setLang('es').greet(true)`` and chain all methods together. I also use Greetr.init to initialize object with default variables and ``return new Greetr.init(var, var, var)`` so that I don't have to new an object everytime I use my Lib function. 
+   In this Greetr Lib, I imitate jQuery so that I can use jQuery way ``g.greet().setLang('es').greet(true)`` and chain all methods together. I also use Greetr.init to initialize object with default variables and I ``return new Greetr.init(var, var, var)`` when I call my object so that I don't always have to new object everytime I use my Lib function.
+
+* **Prototype Chain**
+
+   I add all my methods(function) to my Greetr Prototype, so as to reduce memory use (this is one of prototype advantages). I also point Greetr.init prototype to Greetr prototype so that I can use default variables in all my Greetr prototype object.
