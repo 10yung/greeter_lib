@@ -19,3 +19,9 @@ Here just put the Greeting package prototype and in this practice I've learned s
 * **Prototype Chain**
 
    I add all my methods(function) to my Greetr Prototype, so as to reduce memory use (this is one of prototype advantages). I also point Greetr.init prototype to Greetr prototype so that I can use default variables in all my Greetr prototype object.
+
+###Conclusion
+
+This is a neat way to create javascript Library(Prototype) and build javascript module.
+
+If you have any problem, feel free to email me.
